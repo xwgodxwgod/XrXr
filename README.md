@@ -27,11 +27,11 @@ vless 性能更加优秀，占用资源更少。
 如出现错误，可以多尝试几次，待部署完成后页面底部会显示`Your app was successfully deployed` 
   * 点击Manage App可在Settings下的Config Vars项**查看和重新设置参数**  
   * 点击Open app跳转[欢迎页面](/etc/CADDYIndexPage.md)域名即为heroku分配域名，格式为`xxx.herokuapp.com`，用于客户端  
-  * 默认协议密码为`463e4c80-4d25-4625-8823-de1132903866`，WS路径为$UUID-[vmess|vless|trojan|ss|socks]格式
+  * 默认协议密码为`18368d97-0761-43ab-ac95-f18a009ca990`，WS路径为$UUID-[vmess|vless|trojan|ss|socks]格式
 
 ### 客户端
 * **务必替换所有的`xxx.herokuapp.com`为heroku分配的项目域名**  
-* **务必替换所有的`463e4c80-4d25-4625-8823-de1132903866`为部署时设置的UUID,建议更改,不要每个人都一样**  
+* **务必替换所有的`18368d97-0761-43ab-ac95-f18a009ca990`为部署时设置的UUID,建议更改,不要每个人都一样**  
 
 **XRay 将在部署时会自动实配安装`最新版本`。**
 
@@ -45,13 +45,13 @@ vless 性能更加优秀，占用资源更少。
 * 代理协议：vless 或 vmess
 * 地址：xxx.herokuapp.com
 * 端口：443
-* 默认UUID：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
+* 默认UUID：18368d97-0761-43ab-ac95-f18a009ca990
 * vmess额外id：0
 * 加密：none
 * 传输协议：ws
 * 伪装类型：none
 * 伪装域名：xxx.workers.dev(CF Workers反代地址)
-* 路径：/463e4c80-4d25-4625-8823-de1132903866 // 默认vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
+* 路径：/18368d97-0761-43ab-ac95-f18a009ca990 // 默认vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
 * 底层传输安全：tls
 * 跳过证书验证：false
 ```
@@ -69,11 +69,11 @@ vless 性能更加优秀，占用资源更少。
     "remote_addr": "xxx.herokuapp.com",
     "remote_port": 443,
     "password": [
-        "463e4c80-4d25-4625-8823-de1132903866"
+        "18368d97-0761-43ab-ac95-f18a009ca990"
     ],
     "websocket": {
         "enabled": true,
-        "path": "/463e4c80-4d25-4625-8823-de1132903866-trojan",
+        "path": "/18368d97-0761-43ab-ac95-f18a009ca990-trojan",
         "host": "xxx.herokuapp.com"
     }
 }
@@ -87,7 +87,7 @@ vless 性能更加优秀，占用资源更少。
 * 客户端下载：https://github.com/shadowsocks/shadowsocks-windows/releases/
 * 服务器地址: xxx.herokuapp.com
 * 端口: 443
-* 密码：463e4c80-4d25-4625-8823-de1132903866
+* 密码：18368d97-0761-43ab-ac95-f18a009ca990
 * 加密：chacha20-ietf-poly1305
 * 插件程序：xray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/xray-plugin/releases下载解压后放至shadowsocks同目录
 * 插件选项: tls;host=xxx.herokuapp.com;path=/463e4c80-4d25-4625-8823-de1132903866-ss
